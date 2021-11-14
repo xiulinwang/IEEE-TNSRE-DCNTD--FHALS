@@ -1,3 +1,4 @@
+%% ## before you run this code, please download the tensor toolbox via https://www.tensortoolbox.org/
 function out = f_LRA_CoNCPD_FastHALS(T)
 %% LRA_CoNCPD-FastHALS
 % LRA_CoNCPD based on FastHALS
