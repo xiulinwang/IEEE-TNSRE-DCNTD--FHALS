@@ -1,5 +1,5 @@
 # IEEE-TNSRE-DCNTD--FHALS
-This matlab code is for "Identifying Oscillatory Hyperconnectivity and Hypoconnectivity Networks in Major Depression Using Coupled Tensor Decomposition".
+This matlab code is for "Identifying Oscillatory Hyperconnectivity and Hypoconnectivity Networks in Major Depression Using Coupled Tensor Decomposition". https://ieeexplore.ieee.org/document/9531642
 
 If you refer to this code, please cite our paper as the following format:
 
