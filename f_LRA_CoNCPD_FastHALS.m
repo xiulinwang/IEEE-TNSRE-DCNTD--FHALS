@@ -101,8 +101,10 @@ function out = LRA_CoNCPD_FastHALS(Z)
 %% parse parameters
 iter = 0;
 T         = Z.object; % tensor
-size_tens = size(T{1}); % size of tensors
-N         = numel(size_tens); % order of tensors
+for p = 1:numel(T)
+    size_tens{p} = size(T{p}); % size of tensors
+end
+N         = numel(size_tens{p}); % order of tensors
 R         = Z.R;
 C         = Z.C;
 if isfield(Z,'tol');     tol = Z.tol;         else tol = 1e-8;         end % stopping tolerance
@@ -134,7 +136,7 @@ for p = 1:numel(T)
     KrrU{p}  = ones(R(p)); % U-kr'*U-kr
     KrrU0{p} = ones(R(p)); % U-kr'*U0-kr
     for n = 1:N  
-        U{p}{n}   = max(0, rand(size_tens(n), R(p))); % factor matrix-randn
+        U{p}{n}   = max(0, rand(size_tens{p}(n), R(p))); % factor matrix-randn
         if iscore
             U{p}{n}  = U{p}{n}/norm(U{p}{n},'fro')*Mnrm{p}^(1/(N+1)); % normalize and average
         else
