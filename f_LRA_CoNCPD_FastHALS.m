@@ -45,7 +45,7 @@ function demo_LRA_CoNCPD_FastHALS
 clear;
 clc;
 close all;
-startup;
+startup; % add the path of toolbox
 %% generation of tensor
 for iter = 1:1
     % Params
